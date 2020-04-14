@@ -10,12 +10,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+
 @Controller
 public class TestController {
 
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * 测试mybatis和springMVC
+     * @return
+     */
     @RequestMapping("/test")
     @ResponseBody
     public String Test_springBoot_mybatis(){

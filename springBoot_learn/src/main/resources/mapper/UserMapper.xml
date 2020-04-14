@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace是Mapper文件的全类名-->
 <mapper namespace="com.learn.mapper.UserMapper">
-    <select id="queryUserList" resultType="user">
-         select * from user
+    <!--id属性的值是Mapper类中要配置的方法名，
+    resultType是要封装的对象的类型，
+    此处因为在application.xml文件中配置了实体包的别名，所以可以自己写实体类的名字
+    如果没有配置别名，则要写全类名即com.learn.domain.User-->
+    <select id="queryUserList" resultType="user" >
+        <!--sql语句-->
+        select * from user
     </select>
 </mapper>
